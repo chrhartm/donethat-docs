@@ -180,11 +180,15 @@ function regenerateStructure(today, changedDocs) {
         id: category,
         label: toLabelFromCategory(category),
         files: [],
+        fileOrders: {},
       });
     }
     const cat = categories.get(category);
     if (!cat.files.includes(slug)) {
       cat.files.push(slug);
+    }
+    if (typeof parsed.data.order === "number") {
+      cat.fileOrders[slug] = parsed.data.order;
     }
 
     if (category === "use-cases") {
@@ -205,7 +209,19 @@ function regenerateStructure(today, changedDocs) {
 
   const result = {
     categories: Array.from(categories.values())
-      .map((c) => ({ ...c, files: c.files.sort() }))
+      .map((c) => ({
+        id: c.id,
+        label: c.label,
+        files: c.files.sort((a, b) => {
+          const orderA = c.fileOrders[a];
+          const orderB = c.fileOrders[b];
+          if (orderA !== undefined || orderB !== undefined) {
+            return (orderA ?? Number.MAX_SAFE_INTEGER) - (orderB ?? Number.MAX_SAFE_INTEGER) ||
+              a.localeCompare(b);
+          }
+          return a.localeCompare(b);
+        }),
+      }))
       .sort((a, b) => a.id.localeCompare(b.id)),
     domains,
     outcomes,
