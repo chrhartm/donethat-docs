@@ -3,7 +3,7 @@ title: Search
 category: api
 order: 5
 lastUpdated: '2026-05-19'
-summary: Search your DoneThat task and screenshot history.
+summary: Search your DoneThat task and activity history.
 method: POST
 path: /search
 scopes:
@@ -13,7 +13,7 @@ tags:
   - search
 ---
 
-The search endpoint performs bounded lexical search across your DoneThat task and screenshot history.
+The search endpoint performs bounded lexical search across your DoneThat task and activity history.
 
 ```
 POST https://api.donethat.ai/search
@@ -31,7 +31,7 @@ Pass your API key in the `x-api-key` header.
   "context": "enterprise pilot",
   "limit": 20,
   "days": 7,
-  "sources": ["tasks", "screenshots"]
+  "sources": ["tasks", "activity"]
 }
 ```
 
@@ -41,7 +41,7 @@ Pass your API key in the `x-api-key` header.
 | `context` | string | No | Optional ranking hint (max **100** characters). Refines ordering only; does not broaden matching. |
 | `limit` | number | No | Defaults to `20`; maximum `50`. |
 | `days` | number | No | Defaults to `7`; maximum `30`. |
-| `sources` | string[] | No | `tasks`, `screenshots`, or both. Defaults to both. Invalid values return `400`. |
+| `sources` | string[] | No | `tasks`, `activity`, or both. `screenshots` is accepted as a legacy alias for `activity`. Defaults to both. Invalid values return `400`. |
 
 ## Response
 
@@ -51,7 +51,7 @@ Pass your API key in the `x-api-key` header.
   "query": "customer onboarding",
   "context": "enterprise pilot",
   "days": 7,
-  "sources": ["tasks", "screenshots"],
+  "sources": ["tasks", "activity"],
   "totalMatches": 3,
   "results": [
     {
@@ -63,7 +63,7 @@ Pass your API key in the `x-api-key` header.
       "matchedFields": ["title", "description"],
       "metadata": {
         "minutes": 45,
-        "taskGroupId": "project_123",
+        "projectId": "project_123",
         "visible": true
       }
     }
@@ -74,7 +74,7 @@ Pass your API key in the `x-api-key` header.
 
 Results are ranked by match quality, then newest first. `totalMatches` is the total number found before applying `limit`.
 
-Task result `metadata` may include `minutes`, `taskGroupId` (project id), and `visible`. Screenshot result `metadata` may include `taskId`, `categoryName`, and `categoryEmoji`.
+Task result `metadata` may include `minutes`, `projectId`, and `visible`. Activity result `metadata` may include `taskId`, `categoryName`, and `categoryEmoji`.
 
 ## Example
 

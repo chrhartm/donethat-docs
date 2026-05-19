@@ -34,11 +34,13 @@ Pass your API key in the `x-api-key` header.
 
 | Route | Required scope |
 | :--- | :--- |
-| `GET /projects` | `projects:read` |
-| `GET /projects/:id` | `projects:read` |
+| `GET /projects` | `projects:read` (or `projects:write`) |
+| `GET /projects/:id` | `projects:read` (or `projects:write`) |
 | `POST /projects` | `projects:write` |
-| `POST /projects/:id` | `projects:write` (empty-body read also needs `projects:read`) |
+| `POST /projects/:id` | `projects:write` |
 | `DELETE /projects/:id` | `projects:write` |
+
+Keys with `projects:write` may call all `/projects` routes above. Use `projects:read` alone for read-only integrations.
 
 ## Project object
 
@@ -192,7 +194,7 @@ Send any subset of editable fields:
 Notes:
 
 - `archived: true` archives the project; `archived: false` unarchives it.
-- An empty body returns the current project without changing it, and requires **`projects:read`** in addition to `projects:write`.
+- An empty body returns the current project without changing it (requires `projects:write`, which includes read access).
 - `team` and `portfolio` can be cleared with `null` or an empty string.
 - `confidential` cannot be changed through this API.
 - Omit a field to leave it unchanged.

@@ -4,7 +4,7 @@ category: api
 order: 2
 lastUpdated: '2026-05-19'
 summary: >-
-  Pull aggregated activity rows for a date range at minute, day, task, or week
+  Pull aggregated activity rows for a date range at activity, day, task, or week
   resolution.
 method: POST
 path: /report
@@ -44,9 +44,9 @@ POST https://api.donethat.ai/report
 | :--- | :--- | :--- | :--- |
 | `dateRange.from` | number | Yes* | Unix milliseconds. *Not required when using the [empty body default](#empty-body-default). |
 | `dateRange.to` | number | Yes* | Unix milliseconds. Must be greater than `from`. *Not required when using the empty body default. |
-| `aggregationLevel` | string | Yes* | One of `minute`, `day`, `task`, `week`. *Defaults to `day` with the empty body. |
+| `aggregationLevel` | string | Yes* | One of `activity`, `day`, `task`, `week`. `minute` is accepted as a legacy alias for `activity`. *Defaults to `day` with the empty body. |
 | `projectIds` | string[] | No | Project ids you own or can access. Unknown ids return `400`. |
-| `teamIds` | string[] | No | Team ids you are an active member of. Only valid with `day`, `task`, or `week` (not `minute`). Returns member activity including `user` / `user_email` on rows when applicable. |
+| `teamIds` | string[] | No | Team ids you are an active member of. Only valid with `day`, `task`, or `week` (not `activity`). Returns member activity including `user` / `user_email` on rows when applicable. |
 | `includeCategories` | boolean | No | Defaults to `true`. |
 | `includeProjects` | boolean | No | Defaults to `true`. |
 | `sort` | string | No | `asc` or `desc`. When omitted, rows are ordered by stable row `id` ascending. |
@@ -61,7 +61,7 @@ If you send an empty JSON body, the endpoint returns a useful default report:
 
 ### Range limits
 
-- `minute` resolution - up to 90 days.
+- `activity` resolution (per tracked minute / screenshot) - up to 90 days.
 - `day`, `task`, and `week` resolution - up to 365 days.
 - `week` aggregation only processes full weeks; partial weeks at the edges are dropped.
 
@@ -92,7 +92,7 @@ If you send an empty JSON body, the endpoint returns a useful default report:
 }
 ```
 
-This example shows a day-level row. Row fields vary by `aggregationLevel`; minute-level rows include fields like `timestamp`, `timestampIso`, `time`, `task`, `headline`, and `description`.
+This example shows a day-level row. Row fields vary by `aggregationLevel`; activity-level rows include fields like `timestamp`, `timestampIso`, `time`, `task`, `headline`, and `description`. Row `id` values use an `activity:` prefix when you request `aggregationLevel: "activity"`, and `minute:` when you use the legacy `minute` alias.
 
 Every row includes a stable `id` for deduplication. Minute rows also include `timestampIso`, the ISO 8601 UTC companion to `timestamp`.
 

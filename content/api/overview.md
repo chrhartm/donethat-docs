@@ -39,8 +39,8 @@ When you create an API key, pick the minimum scopes the integration needs. Reque
 | `reports:read` | Read aggregated activity via `/report`; also accepted by `/message`. |
 | `messages:read` | Read formatted summaries via `/message`. |
 | `projects:read` | List and read projects via `/projects`. |
-| `projects:write` | Create, update, and archive projects via `/projects`; also accepted by the deprecated `/project` endpoint. |
-| `search:read` | Search tasks and screenshots via `/search`. |
+| `projects:write` | Create, update, and archive projects via `/projects`; **includes `projects:read`** for those routes. Also accepted by the deprecated `/project` endpoint. |
+| `search:read` | Search tasks and activity via `/search`. |
 
 ## Response shape
 
@@ -103,4 +103,4 @@ Large `/report` requests can take a long time to complete. Prefer `day` aggregat
 - [Messages](/api-reference/messages): generate formatted day/week/month summaries.
 - [Projects](/api-reference/projects): list, create, update, and archive projects.
 - [Project (deprecated)](/api-reference/project): operation-based project endpoint for existing integrations.
-- [Search](/api-reference/search): search task and screenshot history.
+- [Search](/api-reference/search): search task and activity history.
