@@ -74,7 +74,7 @@ Pass your API key in the `x-api-key` header.
 
 Results are ranked by match quality, then newest first. `totalMatches` is the total number found before applying `limit`.
 
-Task results include `minutes`, `taskGroupId`, and `visible` metadata. Screenshot results include `taskId`, `categoryName`, and `categoryEmoji` metadata.
+Task result `metadata` may include `minutes`, `taskGroupId` (project id), and `visible`. Screenshot result `metadata` may include `taskId`, `categoryName`, and `categoryEmoji`.
 
 ## Example
 
@@ -91,10 +91,9 @@ curl -X POST "https://api.donethat.ai/search" \
 
 ## Errors
 
-This endpoint returns bare error objects:
-
 ```json
 {
+  "success": false,
   "error": "query must not be empty."
 }
 ```

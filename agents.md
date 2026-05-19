@@ -60,3 +60,8 @@ Run `npm run deploy-docs` to:
 - Use `gray-matter` (or equivalent) to parse frontmatter + body
 - Frontmatter is YAML between `---` delimiters
 - Body is markdown after the closing `---`
+
+## Writing Style
+
+- Never use em-dashes (U+2014) in docs.
+- Use a normal hyphen (`-`) or rewrite the sentence instead.

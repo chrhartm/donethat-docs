@@ -4,8 +4,8 @@ category: api
 order: 4
 lastUpdated: '2026-05-19'
 summary: >-
-  List, read, create, update, archive, and delete DoneThat projects through the
-  REST API.
+  List, read, create, update, and archive DoneThat projects through the REST
+  API.
 method: GET / POST / DELETE
 path: /projects
 scopes:
@@ -16,7 +16,7 @@ tags:
   - projects
 ---
 
-The projects endpoint is the current REST-style API for managing DoneThat projects.
+The projects endpoint lets you list, read, create, update, and archive DoneThat projects.
 
 ```
 GET    https://api.donethat.ai/projects
@@ -25,6 +25,8 @@ POST   https://api.donethat.ai/projects
 POST   https://api.donethat.ai/projects/:id
 DELETE https://api.donethat.ai/projects/:id
 ```
+
+Updates use `POST` (not `PATCH` or `PUT`). Unsupported methods return `405` with `{ "success": false, "error": "Method Not Allowed" }`.
 
 ## Authentication
 
@@ -35,10 +37,12 @@ Pass your API key in the `x-api-key` header.
 | `GET /projects` | `projects:read` |
 | `GET /projects/:id` | `projects:read` |
 | `POST /projects` | `projects:write` |
-| `POST /projects/:id` | `projects:write` |
+| `POST /projects/:id` | `projects:write` (empty-body read also needs `projects:read`) |
 | `DELETE /projects/:id` | `projects:write` |
 
 ## Project object
+
+Returned as `project` (single) or in the `projects` array (list):
 
 ```json
 {
@@ -77,24 +81,27 @@ Query parameters:
 Response:
 
 ```json
-[
-  {
-    "id": "project_123",
-    "name": "Customer onboarding",
-    "description": null,
-    "color": "#1E88E5",
-    "portfolioId": null,
-    "teamId": null,
-    "private": false,
-    "confidential": false,
-    "status": "active",
-    "createdAt": "2026-05-19T09:00:00.000Z",
-    "updatedAt": "2026-05-19T09:00:00.000Z",
-    "usedAt": "2026-05-19T09:00:00.000Z",
-    "createdBy": "user_123",
-    "updatedBy": "user_123"
-  }
-]
+{
+  "success": true,
+  "projects": [
+    {
+      "id": "project_123",
+      "name": "Customer onboarding",
+      "description": null,
+      "color": "#1E88E5",
+      "portfolioId": null,
+      "teamId": null,
+      "private": false,
+      "confidential": false,
+      "status": "active",
+      "createdAt": "2026-05-19T09:00:00.000Z",
+      "updatedAt": "2026-05-19T09:00:00.000Z",
+      "usedAt": "2026-05-19T09:00:00.000Z",
+      "createdBy": "user_123",
+      "updatedBy": "user_123"
+    }
+  ]
+}
 ```
 
 ## Read one project
@@ -103,7 +110,7 @@ Response:
 GET /projects/:id
 ```
 
-Returns one project object. The API only returns projects owned by you or accessible through an active team membership.
+Returns `{ "success": true, "project": { ... } }`. The API only returns projects owned by you or accessible through an active team membership.
 
 ## Create a project
 
@@ -129,7 +136,20 @@ Request body:
 
 `team` and `portfolio` accept either an id or an exact display name you can access. Pass `null` or an empty string to clear those fields on update.
 
-The response status is `201` and the body is the created project object.
+Response status `201`:
+
+```json
+{
+  "success": true,
+  "project": {
+    "id": "project_123",
+    "name": "Customer onboarding",
+    "status": "active"
+  }
+}
+```
+
+(Other fields match the [Project object](#project-object) above.)
 
 ## Update or archive a project
 
@@ -147,7 +167,6 @@ Send any subset of editable fields:
   "team": null,
   "portfolio": null,
   "private": true,
-  "confidential": false,
   "archived": true
 }
 ```
@@ -155,11 +174,12 @@ Send any subset of editable fields:
 Notes:
 
 - `archived: true` archives the project; `archived: false` unarchives it.
-- An empty body performs an access-checked read of the current project.
+- An empty body returns the current project without changing it, and requires **`projects:read`** in addition to `projects:write`.
 - `team` and `portfolio` can be cleared with `null` or an empty string.
+- `confidential` cannot be changed through this API.
 - Omit a field to leave it unchanged.
 
-The response is the updated project object.
+Response: `{ "success": true, "project": { ... } }`.
 
 ## Delete a project
 
@@ -167,14 +187,16 @@ The response is the updated project object.
 DELETE /projects/:id
 ```
 
-Response:
+**Not supported.** The API returns `403`:
 
 ```json
 {
-  "id": "project_123",
-  "deleted": true
+  "success": false,
+  "error": "Deleting projects is not available through the API."
 }
 ```
+
+Use `archived: true` on `POST /projects/:id` to archive instead.
 
 ## Example
 
@@ -190,10 +212,9 @@ curl -X POST "https://api.donethat.ai/projects" \
 
 ## Errors
 
-This endpoint returns bare error objects:
-
 ```json
 {
+  "success": false,
   "error": "API key missing required scope: projects:read"
 }
 ```

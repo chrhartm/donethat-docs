@@ -49,7 +49,7 @@ POST https://api.donethat.ai/report
 | `teamIds` | string[] | No | Only valid with `day`, `task`, or `week` aggregation. |
 | `includeCategories` | boolean | No | Defaults to `true`. |
 | `includeProjects` | boolean | No | Defaults to `true`. |
-| `sort` | string | No | `asc` or `desc`. When omitted, existing integrations keep the historical row order. |
+| `sort` | string | No | `asc` or `desc`. When omitted, rows are ordered by stable row `id` ascending. |
 
 ### Empty body default
 
@@ -61,8 +61,8 @@ If you send an empty JSON body, the endpoint returns a useful default report:
 
 ### Range limits
 
-- `minute` resolution — up to 90 days.
-- `day`, `task`, and `week` resolution — up to 365 days.
+- `minute` resolution - up to 90 days.
+- `day`, `task`, and `week` resolution - up to 365 days.
 - `week` aggregation only processes full weeks; partial weeks at the edges are dropped.
 
 ## Response
@@ -95,6 +95,10 @@ If you send an empty JSON body, the endpoint returns a useful default report:
 This example shows a day-level row. Row fields vary by `aggregationLevel`; minute-level rows include fields like `timestamp`, `timestampIso`, `time`, `task`, `headline`, and `description`.
 
 Every row includes a stable `id` for deduplication. Minute rows also include `timestampIso`, the ISO 8601 UTC companion to `timestamp`.
+
+Row objects use `snake_case` field names (see [Overview](/api-reference/overview#field-naming)).
+
+When polling for new data, map `rows` and use each row's `id` as the deduplication key. Prefer `aggregationLevel: "day"` and narrow `dateRange` windows to stay within your client's HTTP timeouts.
 
 ## Example
 

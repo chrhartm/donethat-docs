@@ -1,5 +1,5 @@
 ---
-title: Project (legacy)
+title: Project (deprecated)
 category: api
 order: 6
 lastUpdated: '2026-05-19'
@@ -48,28 +48,26 @@ The body is JSON. The shape depends on `operation`.
 
 ### Operations
 
-- **`list`** — returns your projects. Optional `archived: true` includes archived projects; `false` or omitted returns only active ones. Merge is not supported on this endpoint.
-- **`create`** — `name` is required. Other fields are optional.
-- **`update`** — `id` is required. Omit any field to leave it unchanged; pass `null` or `""` to clear a string field.
-- **`delete`** — `id` is required.
-- **`archive`** — `id` is required. Optional `archived` defaults to `true`; pass `false` to unarchive. (Same parameter name as on `list`, but different meaning.)
+- **`list`**: returns your projects. Optional `archived: true` includes archived projects; `false` or omitted returns only active ones.
+- **`create`**: `name` is required. Other fields are optional.
+- **`update`**: `id` is required. Omit any field to leave it unchanged; pass `null` or `""` to clear a string field.
+- **`delete`**: not supported via the API (returns an error). Use **`archive`** instead.
+- **`archive`**: `id` is required. Optional `archived` defaults to `true`; pass `false` to unarchive. (On `list`, `archived` filters which projects are returned.)
 
 ### Common fields
 
-- `id` — required for `update`, `delete`, `archive`. Use a project id from a `list` response.
-- `name` — required for `create`.
-- `description` — free-form string.
-- `private`, `confidential` — booleans.
-- `team`, `portfolio` — optional. Pass either an id, or an exact display name (trimmed, case-sensitive) for a team you belong to or a portfolio you can use. On `update`, omit to leave unchanged; `null` or `""` clears.
+- `id` - required for `update`, `delete`, `archive`. Use a project id from a `list` response.
+- `name` - required for `create`.
+- `description` - free-form string.
+- `private`, `confidential` - booleans.
+- `team`, `portfolio` - optional. Pass either an id, or an exact display name (trimmed, case-sensitive) for a team you belong to or a portfolio you can use. On `update`, omit to leave unchanged; `null` or `""` clears.
 - No top-level `status` field.
 
 ### Allowed `color` values
 
-When set, `color` must be exactly one of the following hex strings — no other values are accepted:
+When set, `color` must be exactly one of the following hex strings - no other values are accepted:
 
 `#FFB623`, `#FF8A65`, `#F4511E`, `#E53935`, `#D81B60`, `#8E24AA`, `#5E35B1`, `#3949AB`, `#1E88E5`, `#039BE5`, `#00ACC1`, `#00897B`, `#43A047`, `#7CB342`, `#C0CA33`, `#FDD835`, `#FB8C00`, `#6D4C41`, `#757575`, `#546E7A`.
-
-The exact palette is exposed in the app — copy it from there if you need a programmatic source.
 
 ## Responses
 

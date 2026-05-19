@@ -15,7 +15,7 @@ The DoneThat HTTP API lets you read your activity data, generate summaries, mana
 https://api.donethat.ai
 ```
 
-All requests and responses use JSON unless noted otherwise. The API is currently in beta — endpoints and payloads may change, and rate limits apply per key.
+All requests and responses use JSON. The API is currently in beta: endpoints and payloads may change, and rate limits apply per key.
 
 ## Authentication
 
@@ -39,14 +39,24 @@ When you create an API key, pick the minimum scopes the integration needs. Reque
 | `reports:read` | Read aggregated activity via `/report`; also accepted by `/message`. |
 | `messages:read` | Read formatted summaries via `/message`. |
 | `projects:read` | List and read projects via `/projects`. |
-| `projects:write` | Create, update, archive, and delete projects via `/projects`; also accepted by the deprecated `/project` endpoint. |
+| `projects:write` | Create, update, and archive projects via `/projects`; also accepted by the deprecated `/project` endpoint. |
 | `search:read` | Search tasks and screenshots via `/search`. |
 
 ## Response shape
 
-Legacy endpoints (`/report`, `/message`, and `/project`) return a JSON envelope with `"success": true` on success. Newer REST endpoints (`/projects` and `/search`) use endpoint-specific shapes; see each page for the exact response.
+All endpoints except the deprecated `/project` route use the same JSON envelope:
 
-Legacy failures return:
+**Success:**
+
+```json
+{
+  "success": true
+}
+```
+
+Success payloads add endpoint-specific fields (for example `rows`, `projects`, `project`, or `results`).
+
+**Failure:**
 
 ```json
 {
@@ -55,20 +65,29 @@ Legacy failures return:
 }
 ```
 
-Newer REST failures return:
+Rate-limited responses (`429`) also include `retryAfterSec` (seconds) and a `Retry-After` HTTP header when applicable.
 
-```json
-{
-  "error": "Human-readable error message"
-}
-```
+Wrong HTTP methods return `405` with the same failure envelope.
 
-Both styles use an appropriate HTTP 4xx or 5xx status.
+The deprecated [`/project`](/api-reference/project) endpoint uses a different request and response format than `/projects`.
+
+## Field naming
+
+- `/report` row objects use `snake_case` (for example `project_id`, `task_id`).
+- `/projects` objects use `camelCase` (for example `teamId`, `portfolioId`).
+
+Map fields explicitly when connecting DoneThat to other tools: naming differs between endpoints (see below).
+
+## Rate limits
+
+Requests are rate limited per API key. When exceeded, the API returns `429` with `success: false`, `error: "rate_limited"`, and `retryAfterSec` (and a `Retry-After` header when applicable). Back off and retry after `retryAfterSec` seconds.
+
+Large `/report` requests can take a long time to complete. Prefer `day` aggregation and narrower date ranges when polling for new rows.
 
 ## Endpoints
 
-- [Reports](/api-reference/reports) — pull aggregated activity rows.
-- [Messages](/api-reference/messages) — generate formatted day/week/month summaries.
-- [Projects](/api-reference/projects) — list, create, update, archive, and delete projects.
-- [Project (legacy)](/api-reference/project) — deprecated operation-based project endpoint.
-- [Search](/api-reference/search) — search task and screenshot history.
+- [Reports](/api-reference/reports): pull aggregated activity rows.
+- [Messages](/api-reference/messages): generate formatted day/week/month summaries.
+- [Projects](/api-reference/projects): list, create, update, and archive projects.
+- [Project (deprecated)](/api-reference/project): operation-based project endpoint for existing integrations.
+- [Search](/api-reference/search): search task and screenshot history.

@@ -4,7 +4,7 @@ category: api
 order: 3
 lastUpdated: '2026-05-19'
 summary: >-
-  Generate formatted day, week, month, quarter, or year summaries — the same
+  Generate formatted day, week, month, quarter, or year summaries - the same
   content shown on the Summaries tab.
 method: GET / POST
 path: /message
@@ -52,8 +52,14 @@ Parameters can be passed as query string (GET) or JSON body (POST).
 }
 ```
 
-- `content` — the formatted summary. A string for `html` and `text`; an array of Slack Blocks (JSON) for `slack`.
-- `metadata.subject` — suggested subject line for email delivery.
+- `content`: the formatted summary. A string for `html` and `text`; a **JSON array of Slack Block Kit blocks** for `slack` (not a plain string).
+- `metadata.subject`: suggested subject line for email delivery.
+
+`404` is returned when no summary exists yet for the requested date and level (for example, the current day before a summary has been generated).
+
+## Errors
+
+See [Overview](/api-reference/overview#response-shape). Common cases: `401` (invalid API key), `403` (missing scope), `404` (no summary for that date/level).
 
 ## Examples
 
