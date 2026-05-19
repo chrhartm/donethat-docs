@@ -19,9 +19,9 @@ All requests and responses use JSON unless noted otherwise. The API is currently
 
 ## Authentication
 
-Most endpoints accept an API key. Create one in the DoneThat app under **Settings → API Access**. Each key has a name and a set of scopes.
+All endpoints require an API key. Create one in the DoneThat app under **Settings → API Access**. Each key has a name and a set of scopes.
 
-Pass the key in the `x-api-key` header:
+Pass the key in the `x-api-key` request header only. The API does not accept API keys in query strings, form fields, or JSON bodies.
 
 ```bash
 curl -X POST "https://api.donethat.ai/report" \
@@ -29,8 +29,6 @@ curl -X POST "https://api.donethat.ai/report" \
      -H "x-api-key: YOUR_API_KEY" \
      -d '{ ... }'
 ```
-
-The `/message` endpoint also accepts the key as an `apiKey` query parameter, which makes it convenient to wire into tools that only support GET URLs (Zapier, Slack reminders, etc).
 
 ## Scopes
 
@@ -43,8 +41,6 @@ When you create an API key, pick the minimum scopes the integration needs. Reque
 | `projects:read` | List and read projects via `/projects`. |
 | `projects:write` | Create, update, archive, and delete projects via `/projects`; also accepted by the deprecated `/project` endpoint. |
 | `search:read` | Search tasks and screenshots via `/search`. |
-
-For MCP clients see the [MCP](/api-reference/mcp) page — those use OAuth client credentials instead of an API key.
 
 ## Response shape
 
@@ -76,4 +72,3 @@ Both styles use an appropriate HTTP 4xx or 5xx status.
 - [Projects](/api-reference/projects) — list, create, update, archive, and delete projects.
 - [Project (legacy)](/api-reference/project) — deprecated operation-based project endpoint.
 - [Search](/api-reference/search) — search task and screenshot history.
-- [MCP](/api-reference/mcp) — OAuth client credentials for Model Context Protocol clients.

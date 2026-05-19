@@ -26,7 +26,7 @@ POST https://api.donethat.ai/message
 
 **Required scope:** `messages:read` or `reports:read`
 
-**Authentication:** `x-api-key` header **or** `apiKey` query parameter — useful when wiring into GET-only integrations.
+**Authentication:** pass your API key in the `x-api-key` header (required for GET and POST).
 
 ## Request parameters
 
@@ -60,7 +60,8 @@ Parameters can be passed as query string (GET) or JSON body (POST).
 Fetch today's summary as plain text via GET:
 
 ```bash
-curl -X GET "https://api.donethat.ai/message?date=2026-02-02&level=day&format=text&apiKey=YOUR_API_KEY"
+curl -X GET "https://api.donethat.ai/message?date=2026-02-02&level=day&format=text" \
+     -H "x-api-key: YOUR_API_KEY"
 ```
 
 Fetch this week's aggregate as Slack blocks via POST:
