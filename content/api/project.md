@@ -31,6 +31,8 @@ POST https://api.donethat.ai/project
 
 The body is JSON. The shape depends on `operation`.
 
+An **empty JSON body** (`{}`) defaults to `{ "operation": "list" }` (active projects only).
+
 ```json
 {
   "operation": "list" | "create" | "update" | "delete" | "archive",
@@ -65,9 +67,11 @@ The body is JSON. The shape depends on `operation`.
 
 ### Allowed `color` values
 
-When set, `color` must be exactly one of the following hex strings - no other values are accepted:
+When set, `color` must be exactly one of the following hex strings (same palette as [`/projects`](/api-reference/projects)):
 
-`#FFB623`, `#FF8A65`, `#F4511E`, `#E53935`, `#D81B60`, `#8E24AA`, `#5E35B1`, `#3949AB`, `#1E88E5`, `#039BE5`, `#00ACC1`, `#00897B`, `#43A047`, `#7CB342`, `#C0CA33`, `#FDD835`, `#FB8C00`, `#6D4C41`, `#757575`, `#546E7A`.
+`#FFB623`, `#4BC0C0`, `#6C63FF`, `#FF4590`, `#32D74B`, `#FFD166`, `#845EC2`, `#00C2FF`, `#FF6B6B`, `#00B8A9`, `#FF9F1C`, `#F9F871`, `#EF5DA8`, `#4ECDC4`, `#00BBF9`, `#FF9671`, `#FCBAD3`, `#A6E3E9`, `#FFCB77`, `#D65DB1`
+
+Other limits: `name` and `color` strings are capped at **100** characters; `description` at **2000** characters.
 
 ## Responses
 

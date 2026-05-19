@@ -71,6 +71,19 @@ Wrong HTTP methods return `405` with the same failure envelope.
 
 The deprecated [`/project`](/api-reference/project) endpoint uses a different request and response format than `/projects`.
 
+## Zero-config defaults
+
+Endpoints meant for automation accept minimal input:
+
+| Endpoint | Empty or omitted input |
+| :--- | :--- |
+| `POST /report` | Last 7 days, `day` aggregation, `sort: desc` |
+| `GET` / `POST /message` | Yesterday (your timezone), `level: day`, `format: html` |
+| `POST /project` (deprecated) | `{ "operation": "list" }` |
+| `GET /projects` | Active projects, sorted by `createdAt` descending |
+| `POST /projects` | Creates a project with an auto-generated name |
+| `POST /search` | **`query` is required** (no sensible default) |
+
 ## Field naming
 
 - `/report` row objects use `snake_case` (for example `project_id`, `task_id`).

@@ -37,11 +37,11 @@ Pass your API key in the `x-api-key` header.
 
 | Field | Type | Required | Notes |
 | :--- | :--- | :--- | :--- |
-| `query` | string | Yes | Search phrase. Empty queries are rejected. |
-| `context` | string | No | Optional ranking hint. It refines ordering but does not broaden matching. |
+| `query` | string | Yes | Search phrase. Required; empty or whitespace-only queries return `400`. Max **100** characters. |
+| `context` | string | No | Optional ranking hint (max **100** characters). Refines ordering only; does not broaden matching. |
 | `limit` | number | No | Defaults to `20`; maximum `50`. |
 | `days` | number | No | Defaults to `7`; maximum `30`. |
-| `sources` | string[] | No | `tasks`, `screenshots`, or both. Defaults to both. |
+| `sources` | string[] | No | `tasks`, `screenshots`, or both. Defaults to both. Invalid values return `400`. |
 
 ## Response
 

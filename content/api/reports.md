@@ -42,11 +42,11 @@ POST https://api.donethat.ai/report
 
 | Field | Type | Required | Notes |
 | :--- | :--- | :--- | :--- |
-| `dateRange.from` | number | Yes | Unix milliseconds. |
-| `dateRange.to` | number | Yes | Unix milliseconds. |
-| `aggregationLevel` | string | Yes | One of `minute`, `day`, `task`, `week`. |
-| `projectIds` | string[] | No | Filter to specific projects. |
-| `teamIds` | string[] | No | Only valid with `day`, `task`, or `week` aggregation. |
+| `dateRange.from` | number | Yes* | Unix milliseconds. *Not required when using the [empty body default](#empty-body-default). |
+| `dateRange.to` | number | Yes* | Unix milliseconds. Must be greater than `from`. *Not required when using the empty body default. |
+| `aggregationLevel` | string | Yes* | One of `minute`, `day`, `task`, `week`. *Defaults to `day` with the empty body. |
+| `projectIds` | string[] | No | Project ids you own or can access. Unknown ids return `400`. |
+| `teamIds` | string[] | No | Team ids you are an active member of. Only valid with `day`, `task`, or `week` (not `minute`). Returns member activity including `user` / `user_email` on rows when applicable. |
 | `includeCategories` | boolean | No | Defaults to `true`. |
 | `includeProjects` | boolean | No | Defaults to `true`. |
 | `sort` | string | No | `asc` or `desc`. When omitted, rows are ordered by stable row `id` ascending. |

@@ -34,9 +34,13 @@ Parameters can be passed as query string (GET) or JSON body (POST).
 
 | Parameter | Type | Required | Description |
 | :--- | :--- | :--- | :--- |
-| `date` | string | Yes | The date for which to fetch the summary, e.g. `2026-02-02`. |
-| `level` | string | Yes | Aggregation level: `day`, `week`, `month`, `quarter`, or `year`. |
-| `format` | string | No | Output format: `html`, `text`, or `slack`. Defaults to `html`. |
+| `date` | string | No | Calendar date as `YYYY-MM-DD` (in your account timezone). Defaults to **yesterday**. Other formats return `400`. |
+| `level` | string | No | Exactly one of: `day`, `week`, `month`, `quarter`, `year`. Defaults to `day`. |
+| `format` | string | No | Exactly one of: `html`, `text`, `slack`. Defaults to `html`. |
+
+### Empty request default
+
+A GET or POST with no parameters (or an empty JSON body) returns **yesterday's daily summary** as HTML. This matches the usual automation use case: "send me what DoneThat recorded for my last full day."
 
 ## Response
 
@@ -63,7 +67,14 @@ See [Overview](/api-reference/overview#response-shape). Common cases: `401` (inv
 
 ## Examples
 
-Fetch today's summary as plain text via GET:
+Fetch the default summary (yesterday, day level, HTML):
+
+```bash
+curl -X GET "https://api.donethat.ai/message" \
+     -H "x-api-key: YOUR_API_KEY"
+```
+
+Fetch a specific day as plain text via GET:
 
 ```bash
 curl -X GET "https://api.donethat.ai/message?date=2026-02-02&level=day&format=text" \

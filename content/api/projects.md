@@ -49,7 +49,7 @@ Returned as `project` (single) or in the `projects` array (list):
   "id": "project_123",
   "name": "Customer onboarding",
   "description": "Implementation work for new customers",
-  "color": "#1E88E5",
+  "color": "#FFB623",
   "portfolioId": null,
   "teamId": "team_123",
   "private": false,
@@ -88,7 +88,7 @@ Response:
       "id": "project_123",
       "name": "Customer onboarding",
       "description": null,
-      "color": "#1E88E5",
+      "color": "#FFB623",
       "portfolioId": null,
       "teamId": null,
       "private": false,
@@ -124,7 +124,7 @@ Request body:
 {
   "name": "Customer onboarding",
   "description": "Implementation work for new customers",
-  "color": "#1E88E5",
+  "color": "#FFB623",
   "team": "team_123_or_exact_team_name",
   "portfolio": "portfolio_123_or_exact_portfolio_name",
   "private": false,
@@ -134,7 +134,25 @@ Request body:
 
 `name` is optional. If omitted or blank, DoneThat creates a name like `New Project 2026-05-19`.
 
-`team` and `portfolio` accept either an id or an exact display name you can access. Pass `null` or an empty string to clear those fields on update.
+`team` and `portfolio` accept either an id or an exact display name you can access. Names are matched **case-sensitively** after trimming. Pass `null` or an empty string to clear those fields on update.
+
+### Field rules
+
+| Field | Rules |
+| :--- | :--- |
+| `name` | Optional on create (auto-generated if omitted). Max **100** characters when set. |
+| `description` | Optional. Max **2000** characters. |
+| `color` | Optional. If set, must be exactly one of the allowed hex values below (same palette as in the app). Invalid values return `{ "success": false, "error": "Invalid color value" }`. |
+| `team`, `portfolio` | Optional. Id or exact display name you can access; case-sensitive. |
+| `private` | Optional boolean. |
+| `confidential` | Optional boolean on **create** only. Cannot be changed on update through this API. |
+| `archived` | Only on `POST /projects/:id`. `true` archives, `false` unarchives. |
+
+### Allowed `color` values
+
+When provided, `color` must be exactly one of:
+
+`#FFB623`, `#4BC0C0`, `#6C63FF`, `#FF4590`, `#32D74B`, `#FFD166`, `#845EC2`, `#00C2FF`, `#FF6B6B`, `#00B8A9`, `#FF9F1C`, `#F9F871`, `#EF5DA8`, `#4ECDC4`, `#00BBF9`, `#FF9671`, `#FCBAD3`, `#A6E3E9`, `#FFCB77`, `#D65DB1`
 
 Response status `201`:
 
@@ -163,7 +181,7 @@ Send any subset of editable fields:
 {
   "name": "Customer onboarding v2",
   "description": "",
-  "color": "#43A047",
+  "color": "#32D74B",
   "team": null,
   "portfolio": null,
   "private": true,
@@ -206,7 +224,7 @@ curl -X POST "https://api.donethat.ai/projects" \
      -H "x-api-key: YOUR_API_KEY" \
      -d '{
        "name": "Customer onboarding",
-       "color": "#1E88E5"
+       "color": "#FFB623"
      }'
 ```
 
