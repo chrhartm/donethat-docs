@@ -36,9 +36,7 @@ Pass your API key in the `x-api-key` header. Only `GET` is supported; other meth
 | Field | Type | Notes |
 | :--- | :--- | :--- |
 | `name` | string \| null | DoneThat settings name when set; otherwise Firebase Auth display name; otherwise the local part of the sign-in email. |
-| `email` | string \| null | Primary sign-in email from Firebase Auth. |
-
-Either field may be `null` when the underlying account data is missing.
+| `email` | string | Primary sign-in email from Firebase Auth. |
 
 ## Example
 
