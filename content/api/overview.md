@@ -2,7 +2,7 @@
 title: Overview
 category: api
 order: 1
-lastUpdated: '2026-05-19'
+lastUpdated: '2026-05-20'
 summary: 'Base URL, authentication, scopes, and conventions for the DoneThat HTTP API.'
 tags:
   - api
@@ -41,6 +41,7 @@ When you create an API key, pick the minimum scopes the integration needs. Reque
 | `projects:read` | List and read projects via `/projects`. |
 | `projects:write` | Create, update, and archive projects via `/projects`; **includes `projects:read`** for those routes. Also accepted by the deprecated `/project` endpoint. |
 | `search:read` | Search tasks and activity via `/search`. |
+| `user:read` | Read basic profile info (name, email) via `/user`. |
 
 ## Response shape
 
@@ -83,6 +84,7 @@ Endpoints meant for automation accept minimal input:
 | `GET /projects` | Active projects, sorted by `createdAt` descending |
 | `POST /projects` | Creates a project with an auto-generated name |
 | `POST /search` | **`query` is required** (no sensible default) |
+| `GET /user` | No query parameters or body |
 
 ## Field naming
 
@@ -104,3 +106,4 @@ Large `/report` requests can take a long time to complete. Prefer `day` aggregat
 - [Projects](/api-reference/projects): list, create, update, and archive projects.
 - [Project (deprecated)](/api-reference/project): operation-based project endpoint for existing integrations.
 - [Search](/api-reference/search): search task and activity history.
+- [User](/api-reference/user): read basic profile information for the API key owner.
