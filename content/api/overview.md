@@ -2,7 +2,7 @@
 title: Overview
 category: api
 order: 1
-lastUpdated: '2026-05-20'
+lastUpdated: '2026-05-21'
 summary: 'Base URL, authentication, scopes, and conventions for the DoneThat HTTP API.'
 tags:
   - api
@@ -37,7 +37,7 @@ When you create an API key, pick the minimum scopes the integration needs. Reque
 | Scope | Grants |
 | :--- | :--- |
 | `reports:read` | Read aggregated activity via `/report`; also accepted by `/message`. |
-| `messages:read` | Read formatted summaries via `/message`. |
+| `summaries:read` | Read formatted summaries via `/message`. |
 | `projects:read` | List and read projects via `/projects`. |
 | `projects:write` | Create, update, and archive projects via `/projects`; **includes `projects:read`** for those routes. Also accepted by the deprecated `/project` endpoint. |
 | `search:read` | Search tasks and activity via `/search`. |

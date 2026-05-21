@@ -92,8 +92,8 @@ Access tokens are short-lived. Refresh tokens allow renewal without signing in a
 | :--- | :--- | :--- | :--- |
 | `generate_report` | Generate reports with activity, day, task, or week aggregation for the authenticated user. | `reports:read` | Read |
 | `search_content` | Search recent task and activity history with a bounded lexical scan. | `search:read` | Read |
-| `get_summary` | Read daily summaries for one local date. | `read_summaries` or `summaries:write` | Read |
-| `get_message` | Fetch a daily or aggregate summary rendered as text, HTML, or Slack blocks. | `read_summaries` | Read |
+| `get_summary` | Read daily summaries for one local date. | `summaries:read` or `summaries:write` | Read |
+| `get_message` | Fetch a daily or aggregate summary rendered as text, HTML, or Slack blocks. | `summaries:read` | Read |
 | `generate_summary` | Generate the next draft daily summary. | `summaries:write` | Write |
 | `approve_summary` | Approve a draft daily summary, optionally applying patch-style changes first. | `summaries:write` | Write |
 | `edit_summary` | Edit an approved daily summary with patch-style changes. | `summaries:write` | Write |
@@ -107,7 +107,7 @@ When you authorize a connector, DoneThat shows these OAuth scopes. Grant only wh
 | Scope | Grants |
 | :--- | :--- |
 | `reports:read` | Generate DoneThat reports for the authenticated account, including activity, day, task, and week views. |
-| `read_summaries` | Fetch rendered daily and aggregate summaries, and retrieve existing daily summary data for read-only review. |
+| `summaries:read` | Fetch rendered daily and aggregate summaries, and retrieve existing daily summary data for read-only review. |
 | `search:read` | Search the authenticated user's task and activity history in read-only mode. |
 | `tasks:write` | Create manual DoneThat tasks with either exact times or day-linked durations. |
 | `summaries:write` | Generate, approve, and edit DoneThat daily summaries for the authenticated account. |

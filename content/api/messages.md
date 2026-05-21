@@ -2,14 +2,14 @@
 title: Messages
 category: api
 order: 3
-lastUpdated: '2026-05-19'
+lastUpdated: '2026-05-21'
 summary: >-
   Generate formatted day, week, month, quarter, or year summaries - the same
   content shown on the Summaries tab.
 method: GET / POST
 path: /message
 scopes:
-  - 'messages:read'
+  - 'summaries:read'
   - 'reports:read'
 tags:
   - api
@@ -24,7 +24,7 @@ GET  https://api.donethat.ai/message
 POST https://api.donethat.ai/message
 ```
 
-**Required scope:** `messages:read` or `reports:read`
+**Required scope:** `summaries:read` or `reports:read`
 
 **Authentication:** pass your API key in the `x-api-key` header (required for GET and POST).
 
