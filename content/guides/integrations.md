@@ -1,7 +1,7 @@
 ---
 title: Integrations
 category: features
-lastUpdated: '2026-05-13'
+lastUpdated: '2026-05-21'
 tags:
   - integrations
   - api
@@ -16,4 +16,4 @@ Set your API keys in [settings](/settings), then use the API to generate CSV rep
 
 For manual data export, you can download CSV files in your [calendar](/calendar) view.
 
-For integration with AI agents, use our MCP server at mcp.donethat.ai. Set it up e.g., in Claude under Customize > Add manual. This allows you to for example analyze your DoneThat data from within Claude.
+For integration with AI agents, use the [DoneThat MCP server](/mcp) at `https://mcp.donethat.ai`. Set it up in Claude under **Settings → Connectors → Add custom connector**, or in ChatGPT under **Settings → Connectors**. This lets you analyze DoneThat data from within your AI assistant.

@@ -9,7 +9,8 @@
         "messages",
         "projects",
         "search",
-        "project"
+        "project",
+        "user"
       ]
     },
     {
@@ -71,6 +72,13 @@
       "label": "Knowledge Base",
       "files": [
         "ai-adoption-guide"
+      ]
+    },
+    {
+      "id": "mcp",
+      "label": "MCP",
+      "files": [
+        "overview"
       ]
     },
     {
