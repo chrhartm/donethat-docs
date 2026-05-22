@@ -2,6 +2,36 @@
 
 Build logic and structure for the DoneThat documentation repository.
 
+## Git and commits (agents)
+
+**NEVER commit, push, or amend git history in this repo unless the user explicitly asks you to in that message.**
+
+This includes:
+
+- Do **not** run `npm run deploy-docs` without `SKIP_GIT=1` (that script commits and may push by default).
+- Do **not** run `git commit`, `git push`, `git add` for the purpose of committing, or `git commit --amend`.
+- Do **not** assume deploy, sync, or "ship it" means commit. Only the user commits unless they say otherwise.
+
+When you need regenerated schema or metadata, run:
+
+```bash
+SKIP_GIT=1 npm run deploy-docs
+```
+
+Leave all changes unstaged or staged only if the user asked you to prepare a commit. The user commits and pushes.
+
+## Website docs submodule
+
+**NEVER edit `donethat-website/docs/` directly.** That directory is a git submodule checkout of this repo, not a second source of truth.
+
+After the user pushes changes here, they (or you, only when asked) update the website with:
+
+```bash
+cd ../donethat-website && npm run docs:sync
+```
+
+Do not copy files into the submodule by hand.
+
 ## Directory Structure
 
 - **`content/`** - Source of truth (atomic markdown files)
@@ -9,6 +39,8 @@ Build logic and structure for the DoneThat documentation repository.
   - `content/knowledge-base/` - Knowledge-base articles and interactive guide source
   - `content/faq/` - Q&A files
   - `content/use-cases/<domain>/` - Outcome-first use case documentation grouped by domain
+  - `content/mcp/` - MCP connector documentation (rendered at `/mcp` on the website)
+  - `content/api/` - HTTP API reference (rendered at `/api-reference` on the website)
 - **`schema/terminology.json`** - Domain, stage, and outcome registry for use cases
 - **`schema/structure.json`** - Auto-generated registry for category nav plus use-case filters
 - **`metadata.json`** - Global app metadata
@@ -53,7 +85,9 @@ The `schema/structure.json` file is **auto-generated** by `scripts/deploy-docs.c
 Run `npm run deploy-docs` to:
 1. Regenerate `schema/structure.json` from content
 2. Update `metadata.json.lastUpdated` to today's date
-3. Commit and push changes
+3. Commit and push changes (human workflow only)
+
+**Agents:** use `SKIP_GIT=1 npm run deploy-docs` so step 3 is skipped. Never commit for the user.
 
 ## Parsing Files
 
@@ -65,3 +99,7 @@ Run `npm run deploy-docs` to:
 
 - Never use em-dashes (U+2014) in docs.
 - Use a normal hyphen (`-`) or rewrite the sentence instead.
+
+## MCP documentation
+
+When MCP tools, OAuth scopes, or connection details change in the Firebase backend (`donethat-firebase`), manually update [`content/mcp/overview.md`](content/mcp/overview.md) and run `SKIP_GIT=1 npm run deploy-docs`. The user pushes this repo, then runs `npm run docs:sync` in `donethat-website`.

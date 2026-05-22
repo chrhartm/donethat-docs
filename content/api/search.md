@@ -2,7 +2,7 @@
 title: Search
 category: api
 order: 5
-lastUpdated: '2026-05-19'
+lastUpdated: '2026-05-22'
 summary: Search your DoneThat task and activity history.
 method: POST
 path: /search
@@ -41,7 +41,7 @@ Pass your API key in the `x-api-key` header.
 | `context` | string | No | Optional ranking hint (max **100** characters). Refines ordering only; does not broaden matching. |
 | `limit` | number | No | Defaults to `20`; maximum `50`. |
 | `days` | number | No | Defaults to `7`; maximum `30`. |
-| `sources` | string[] | No | `tasks`, `activity`, or both. `screenshots` is accepted as a legacy alias for `activity`. Defaults to both. Invalid values return `400`. |
+| `sources` | string[] | No | `tasks`, `activity`, or both. Defaults to both. Invalid values return `400`. |
 
 ## Response
 

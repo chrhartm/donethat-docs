@@ -37,6 +37,7 @@ function getMarkdownFiles(dir) {
 function toLabelFromCategory(id) {
   if (id === "faq") return "FAQ";
   if (id === "api") return "API Reference";
+  if (id === "mcp") return "MCP";
   return id
     .split(/[-_]/g)
     .map((p) => p.charAt(0).toUpperCase() + p.slice(1))
