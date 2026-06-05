@@ -8,7 +8,7 @@ tags:
   - introduction
   - overview
 summary: Get started with DoneThat
-youtube: 'https://youtu.be/DbvQfsong3I'
+youtube: 'https://youtu.be/p1gual1TV58'
 ---
 
 Did you know that Tobias Lütke, CEO of shopify, has been automatically taking screenshots for the last 15 years? Or that Rahul Vohra, CEO of superhuman, is telling his assistant every time he switches tasks to keep track of time spent?

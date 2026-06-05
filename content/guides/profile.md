@@ -8,7 +8,6 @@ tags:
   - social
   - handle
 summary: View and share your activity profile
-youtube: 'https://youtu.be/MmqfMRB6Tbc'
 ---
 
 This is the profile your followers and team members see. By default it is private. You can change that in [social](/social).

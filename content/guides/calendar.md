@@ -12,7 +12,6 @@ tags:
   - month
   - manual
 summary: View your activity calendar
-youtube: 'https://youtu.be/F5XQJ0tHejU'
 ---
 
 This view is only visible to you, nobody else. The content shown here is grouped and analyzed in [projects](/projects).
