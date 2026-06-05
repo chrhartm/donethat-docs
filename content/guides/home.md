@@ -16,4 +16,4 @@ At the end of every week, month, quarter, and year you will also get a summary. 
 
 For each period you can set goals here. Either input goals: Goals based on how much time you want to spend. Or output goals: Something you want to achive.
 
-These goals help [Don](/don), DoneThat's coach, to keep you on track and coach you on next steps.
+These goals help Don, DoneThat's coach, to keep you on track and coach you on next steps.

@@ -13,6 +13,6 @@ You can be part of more than one team. Each team is part of an [organization](/o
 
 Everybody can add new team members but only admins can remove people.
 
-Everybody is private by default, if you want to share your [summaries](/summaries) with your team, you can change your visibility in your [social](/social) settings.
+Everybody is private by default, if you want to share your [summaries](/home) with your team, you can change your visibility in your social settings.
 
-Team-level projects and portfolios can be managed on the [projects](/projects) page.
+Team-level projects and portfolios can be managed on the [tasks](/tasks) page.
