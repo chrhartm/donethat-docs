@@ -14,12 +14,8 @@ tags:
 summary: View your activity calendar
 ---
 
-This view is only visible to you, nobody else. The content shown here is grouped and analyzed in [projects](/projects).
+This is the most detailed view of your tracking data. Each day has two columns: On the left you see minute-by-minute data, on the right the auto-generated tasks associated with those activities.
 
 You can toggle between a day, week, and month view. In each view, use the download button at the top right to export a CSV for that time frame.
-
-On the day and week view, each day has two elements. On the left there is a small column that shows five-minute activities. On the left is the task-level summary of those. These are visible after you click "Finish Day" or automatically after midnight.
-
-Hover over individual activity or task entries to edit or delete them.
 
 Add manual entries by dragging an entry in an empty space on the calendar.

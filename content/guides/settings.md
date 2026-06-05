@@ -6,10 +6,12 @@ tags:
   - settings
   - configuration
   - preferences
+  - api
+  - mcp
+  - don
+  - subscription
   - recording
 summary: Manage your account settings
 ---
 
-Your core account settings and subscription. Settings specific to parts of the platform are on their respective pages in the "More" dropdown.
-
-Settings specific to the recording such as app exclusions, bring your own LLM, or audio settings are on your Desktop app in the "Permissions" top left of the app.
+All account settings are grouped here. See [team](/team) and [organization](/organization) for settings related to your team.
