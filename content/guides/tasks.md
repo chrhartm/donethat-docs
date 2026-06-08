@@ -20,6 +20,6 @@ By default, AI will add up to eight projects. You can also add or edit your proj
 
 A "private" project will not count towards your total hours worked in your stats.
 
-A "confidential" project will autoamtically make all tasks invisible in that project but still count towarsd your stats.
+A "confidential" project will automatically make all tasks invisible in that project but still count towards your stats.
 
 Projects shared by a team will appear in every team member's project overview and their tasks will automatically be assigned to them as they fit.
