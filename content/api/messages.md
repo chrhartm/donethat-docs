@@ -17,7 +17,7 @@ tags:
   - summaries
 ---
 
-The messaging endpoint returns a structured summary for a given date and aggregation level, in HTML, plain text, or Slack-block format. It produces the same content shown on the in-app Summaries tab.
+The messaging endpoint returns a structured summary for a given date and aggregation level, in HTML, plain text, Slack-block, or Discord-embed format. It produces the same content shown on the in-app Summaries tab.
 
 ```
 GET  https://api.donethat.ai/message
@@ -36,7 +36,7 @@ Parameters can be passed as query string (GET) or JSON body (POST).
 | :--- | :--- | :--- | :--- |
 | `date` | string | No | Calendar date as `YYYY-MM-DD` (in your account timezone). Defaults to **yesterday**. Other formats return `400`. |
 | `level` | string | No | Exactly one of: `day`, `week`, `month`, `quarter`, `year`. Defaults to `day`. |
-| `format` | string | No | Exactly one of: `html`, `text`, `slack`. Defaults to `html`. |
+| `format` | string | No | Exactly one of: `html`, `text`, `slack`, `discord`. Defaults to `html`. |
 
 ### Empty request default
 
@@ -56,7 +56,7 @@ A GET or POST with no parameters (or an empty JSON body) returns **yesterday's d
 }
 ```
 
-- `content`: the formatted summary. A string for `html` and `text`; a **JSON array of Slack Block Kit blocks** for `slack` (not a plain string).
+- `content`: the formatted summary. A string for `html` and `text`; a **JSON array of Slack Block Kit blocks** for `slack`, and a **single Discord embed object** for `discord` (neither is a plain string).
 - `metadata.subject`: suggested subject line for email delivery.
 
 `404` is returned when no summary exists yet for the requested date and level (for example, the current day before a summary has been generated).
