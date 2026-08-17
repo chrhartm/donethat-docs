@@ -2064,7 +2064,7 @@
         "staff",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "agentic-referral-letter-generation",
@@ -2118,7 +2118,7 @@
         "analyze",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "ai-assisted-field-technician-dispatch",
@@ -2280,7 +2280,7 @@
         "qualify",
         "speed"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "ai-moderated-qualitative-interviews",
@@ -2406,7 +2406,7 @@
         "source",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "ai-tenant-screening-and-scoring",
@@ -2694,7 +2694,7 @@
         "approve",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "approval-outcome-predictor",
@@ -2748,7 +2748,7 @@
         "approve",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "approver-routing-engine",
@@ -2856,7 +2856,7 @@
         "scope",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "async-video-interview-analysis",
@@ -3036,7 +3036,7 @@
         "propose",
         "speed"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "auto-drafted-success-plan",
@@ -3054,7 +3054,7 @@
         "handoff",
         "speed"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "auto-generated-campaign-briefs",
@@ -3090,7 +3090,7 @@
         "renew",
         "speed"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "auto-generated-review-decks",
@@ -3198,7 +3198,7 @@
         "renew",
         "speed"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "automated-3-way-match-agent",
@@ -3630,7 +3630,7 @@
         "prospect",
         "cost"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "autonomous-customs-documentation",
@@ -3974,7 +3974,7 @@
         "sell",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "bill-of-lading-auto-draft",
@@ -4298,7 +4298,7 @@
         "qualify",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "buying-signal-trigger-monitoring",
@@ -4316,7 +4316,7 @@
         "prospect",
         "speed"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "calibration-bias-detector",
@@ -4550,7 +4550,7 @@
         "propose",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "cash-application-via-remittance-parsing",
@@ -4586,7 +4586,7 @@
         "review",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "champion-departure-monitoring",
@@ -4604,7 +4604,7 @@
         "renew",
         "speed"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "change-impact-simulator",
@@ -4730,7 +4730,7 @@
         "renew",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "churn-to-win-back-targeting",
@@ -4820,7 +4820,7 @@
         "negotiate",
         "speed"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "clause-risk-classifier",
@@ -4892,7 +4892,7 @@
         "recommend",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "client-resource-navigator",
@@ -4928,7 +4928,7 @@
         "deliver",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "clinical-photography-classification",
@@ -5126,7 +5126,7 @@
         "scope",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "comparison-matrix-auto-fill",
@@ -5234,7 +5234,7 @@
         "select",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "competitor-price-monitor",
@@ -5396,7 +5396,7 @@
         "evaluate",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "computer-vision-damage-assessment",
@@ -5540,7 +5540,7 @@
         "staff",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "contact-driver-and-trend-analytics",
@@ -5738,7 +5738,7 @@
         "negotiate",
         "speed"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "contract-redline-deviation-analysis",
@@ -5774,7 +5774,7 @@
         "review",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "contract-renewal-negotiation-brief",
@@ -5864,7 +5864,7 @@
         "select",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "contract-terms-auto-applied-to-po",
@@ -5882,7 +5882,7 @@
         "order",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "contract-to-invoice-generation",
@@ -6404,7 +6404,7 @@
         "handoff",
         "speed"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "customer-360-context-auto-attach",
@@ -6784,7 +6784,7 @@
         "negotiate",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "decision-capture-disagreement-extraction",
@@ -6928,7 +6928,7 @@
         "receive",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "delivery-exception-classifier",
@@ -6982,7 +6982,7 @@
         "order",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "delivery-promise-accuracy-model",
@@ -7036,7 +7036,7 @@
         "request",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "demand-and-capacity-forecast",
@@ -7379,7 +7379,7 @@
         "discover",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "disposal-milestone-monitor",
@@ -7451,7 +7451,7 @@
         "qualify",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "doa-compliance-enforcement",
@@ -7469,7 +7469,7 @@
         "approve",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "document-forensics-engine",
@@ -7937,7 +7937,7 @@
         "scope",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "embedding-based-deduplication",
@@ -8171,7 +8171,7 @@
         "source",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "essay-authenticity-screening",
@@ -8567,7 +8567,7 @@
         "close",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "forecasting-tournament-on-outcomes",
@@ -8639,7 +8639,7 @@
         "request",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "freight-claim-filing-agent",
@@ -9215,7 +9215,7 @@
         "evaluate",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "holistic-application-scoring",
@@ -9269,7 +9269,7 @@
         "prospect",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "hyper-personalized-re-engagement-generator",
@@ -9323,7 +9323,7 @@
         "prospect",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "id-document-ocr-parser",
@@ -9377,7 +9377,7 @@
         "recommend",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "implementation-feedback-loop",
@@ -9413,7 +9413,7 @@
         "handoff",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "in-app-contextual-help",
@@ -9539,7 +9539,7 @@
         "recommend",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "inline-vision-based-defect-detection",
@@ -9755,7 +9755,7 @@
         "evaluate",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "internal-mobility-supply-forecaster",
@@ -9881,7 +9881,7 @@
         "receive",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "invoice-ocr-and-extraction",
@@ -10097,7 +10097,7 @@
         "kickoff",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "knowledge-base-match-at-intake",
@@ -10313,7 +10313,7 @@
         "close",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "lease-accounting-agent",
@@ -10511,7 +10511,7 @@
         "close",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "license-assignment-optimizer",
@@ -10637,7 +10637,7 @@
         "negotiate",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "liveness-and-deepfake-detection",
@@ -10835,7 +10835,7 @@
         "approve",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "loyalty-context-retrieval",
@@ -11015,7 +11015,7 @@
         "source",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "marketing-mix-budget-modeling",
@@ -11051,7 +11051,7 @@
         "review",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "measurement-plan-validity-review",
@@ -11087,7 +11087,7 @@
         "analyze",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "meddic-auto-extraction",
@@ -11105,7 +11105,7 @@
         "qualify",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "medical-and-legal-document-synthesis",
@@ -11177,7 +11177,7 @@
         "deliver",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "meeting-transcription",
@@ -11269,7 +11269,7 @@
         "discover",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "mid-program-outcome-prediction",
@@ -11557,7 +11557,7 @@
         "select",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "multi-engine-deep-research",
@@ -11647,7 +11647,7 @@
         "analyze",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "multi-signal-demand-forecasting",
@@ -11719,7 +11719,7 @@
         "analyze",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "multi-step-workflow-orchestration",
@@ -11845,7 +11845,7 @@
         "select",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "negotiation-role-play-simulator",
@@ -11863,7 +11863,7 @@
         "negotiate",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "new-hire-conversational-assistant",
@@ -12043,7 +12043,7 @@
         "request",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "off-market-deal-sourcing-agent",
@@ -12565,7 +12565,7 @@
         "propose",
         "speed"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "personalized-f-and-b-offer-generator",
@@ -12943,7 +12943,7 @@
         "order",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "po-auto-generation-from-requisition",
@@ -12961,7 +12961,7 @@
         "order",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "policy-compliance-scan",
@@ -13015,7 +13015,7 @@
         "request",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "policy-rag-coverage-assistant",
@@ -13105,7 +13105,7 @@
         "discover",
         "speed"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "post-closure-obligation-monitor",
@@ -13141,7 +13141,7 @@
         "close",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "post-deploy-anomaly-clustering",
@@ -13249,7 +13249,7 @@
         "discover",
         "speed"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "pre-closure-churn-interception",
@@ -13321,7 +13321,7 @@
         "kickoff",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "pre-meeting-steelman-pair",
@@ -13375,7 +13375,7 @@
         "sell",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "precedent-and-case-law-retrieval",
@@ -13519,7 +13519,7 @@
         "qualify",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "predictive-yield-scoring",
@@ -13609,7 +13609,7 @@
         "propose",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "prior-learning-assessment-evaluation",
@@ -13771,7 +13771,7 @@
         "close",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "procedure-retrieval-at-task-start",
@@ -13825,7 +13825,7 @@
         "close",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "project-risk-register-generation",
@@ -13861,7 +13861,7 @@
         "kickoff",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "promise-to-pay-tracker",
@@ -13897,7 +13897,7 @@
         "handoff",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "promotion-calendar-optimizer",
@@ -13969,7 +13969,7 @@
         "sell",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "proposal-scoring-against-rfp-criteria",
@@ -13987,7 +13987,7 @@
         "evaluate",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "proposal-scoring-assistant",
@@ -14185,7 +14185,7 @@
         "sell",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "re-grant-risk-profiler",
@@ -14293,7 +14293,7 @@
         "discover",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "real-time-damage-detection-at-door",
@@ -14509,7 +14509,7 @@
         "receive",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "recommendation-adversarial-stress-tester",
@@ -14527,7 +14527,7 @@
         "recommend",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "recruiter-call-coaching",
@@ -15229,7 +15229,7 @@
         "close",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "reusable-ip-extraction-agent",
@@ -15247,7 +15247,7 @@
         "deliver",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "revealjs-vibe-coding-slides",
@@ -15285,7 +15285,7 @@
         "source",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "reverse-logistics-routing",
@@ -15447,7 +15447,7 @@
         "source",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "risk-based-approval-routing",
@@ -15465,7 +15465,7 @@
         "approve",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "risk-based-inspection-scheduler",
@@ -15537,7 +15537,7 @@
         "kickoff",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "risk-scoring-for-high-impact-cases",
@@ -15645,7 +15645,7 @@
         "propose",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "role-based-learning-auto-assignment",
@@ -15681,7 +15681,7 @@
         "staff",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "rollback-decision-assistant",
@@ -15825,7 +15825,7 @@
         "handoff",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "save-play-recommender",
@@ -15843,7 +15843,7 @@
         "renew",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "scenario-based-capacity-simulation",
@@ -15933,7 +15933,7 @@
         "deliver",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "scope-risk-classifier",
@@ -15951,7 +15951,7 @@
         "scope",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "screenshot-and-log-artifact-parser",
@@ -16023,7 +16023,7 @@
         "close",
         "speed"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "security-vulnerability-scanner",
@@ -16311,7 +16311,7 @@
         "close",
         "speed"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "silence-as-resolution-detector",
@@ -16401,7 +16401,7 @@
         "select",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "site-logistics-layout-optimisation",
@@ -16527,7 +16527,7 @@
         "staff",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "sla-breach-prediction",
@@ -16689,7 +16689,7 @@
         "scope",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "sox-control-narrative-drafting",
@@ -16743,7 +16743,7 @@
         "review",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "spend-category-auto-classification",
@@ -16761,7 +16761,7 @@
         "request",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "split-po-detection",
@@ -16779,7 +16779,7 @@
         "order",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "stakeholder-assumption-extractor",
@@ -16851,7 +16851,7 @@
         "kickoff",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "stale-quote-repricing-lock",
@@ -16959,7 +16959,7 @@
         "recommend",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "strategic-skills-gap-analysis",
@@ -17193,7 +17193,7 @@
         "review",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "survey-response-auto-coding",
@@ -17517,7 +17517,7 @@
         "receive",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "threshold-based-auto-approval",
@@ -17681,7 +17681,7 @@
         "evaluate",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "touchless-gr-auto-posting",
@@ -17699,7 +17699,7 @@
         "receive",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "transfer-credit-evaluation",
@@ -17861,7 +17861,7 @@
         "analyze",
         "speed"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "unstructured-request-parsing",
@@ -18047,7 +18047,7 @@
         "staff",
         "cost"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "variance-explainer",
@@ -18358,7 +18358,7 @@
         "prospect",
         "speed"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "win-back-segment-prioritizer",
@@ -18394,7 +18394,7 @@
         "sell",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "win-loss-reason-classifier",
@@ -18412,7 +18412,7 @@
         "close",
         "quality"
       ],
-      "lastUpdated": "2026-04-30"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "win-probability-scoring",
@@ -18560,7 +18560,7 @@
         "deliver",
         "quality"
       ],
-      "lastUpdated": "2026-05-01"
+      "lastUpdated": "2026-08-17"
     },
     {
       "slug": "zero-based-budget-challenger",
