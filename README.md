@@ -25,7 +25,7 @@ This will:
 
 - `content/` - Markdown files with YAML frontmatter
 - `content/knowledge-base/` - Knowledge-base articles and interactive guide source
-- `content/use-cases/<domain>/` - Outcome-first use case content grouped by domain
+- `content/use-cases/` - Removed; AI adoption use cases now live in Sanity as `aiAdoptionUseCase` documents
 - `schema/terminology.json` - Domain, stage, and outcome registry
 - `schema/structure.json` - Auto-generated category nav and use-case filter index
 - `metadata.json` - Global app metadata

@@ -38,7 +38,7 @@ Do not copy files into the submodule by hand.
   - `content/guides/` - Feature documentation
   - `content/knowledge-base/` - Knowledge-base articles and interactive guide source
   - `content/faq/` - Q&A files
-  - `content/use-cases/<domain>/` - Outcome-first use case documentation grouped by domain
+  - `content/use-cases/` - Removed; AI adoption use cases live in Sanity (`aiAdoptionUseCase`)
   - `content/mcp/` - MCP connector documentation (rendered at `/mcp` on the website)
   - `content/api/` - HTTP API reference (rendered at `/api-reference` on the website)
 - **`schema/terminology.json`** - Domain, stage, and outcome registry for use cases

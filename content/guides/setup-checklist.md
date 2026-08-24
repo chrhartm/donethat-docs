@@ -1,0 +1,38 @@
+---
+title: Setup checklist
+category: features
+lastUpdated: '2026-08-24'
+tags:
+  - onboarding
+  - getting-started
+  - setup
+  - checklist
+summary: Track your remaining setup steps
+---
+
+The setup checklist sits at the bottom of the left sidebar as a progress ring showing how many steps you have left. Click it to open the checklist panel.
+
+The panel expands the next step you haven't done yet and collapses the rest, so there is only ever one thing in front of you. Each step has a button that takes you where you need to go.
+
+## The steps
+
+1. **Install the desktop app**: DoneThat tracks your work from the app running in your tray. This step completes once the app first checks in.
+2. **Grant capture permissions**: grant it in the desktop app's Setup section. Ticks itself once captures start arriving; the button opens the calendar so you can see whether they are.
+3. **Review your recording time**: check which days and hours DoneThat records so it matches how you actually work. Already complete if you have set non-default work hours; otherwise it completes when you open recording settings.
+4. **Create your projects**: projects group your work so summaries read the way you'd describe them. Completes when you have at least one project.
+5. **Set up your profile**: add your name and handle so shared summaries show who they belong to.
+6. **Set your first goal**: goals turn tracked time into progress you can review. Goals live on the summaries page.
+7. **Connect your apps**: link your calendar, Slack or Discord. Already complete if you have one connected; otherwise it completes when you open integrations settings.
+8. **Get your first summary**: press "Finish your day" when you're done, or wait for the next day to roll up on its own. This is the only step you can't finish by clicking something.
+
+Steps tick themselves. There is nothing to check off by hand, and nothing to undo if you change something later.
+
+## Hiding it
+
+"Hide this checklist" at the bottom of the panel removes the ring from the sidebar. Your progress is kept, and you can bring it back from **Settings → Profile**, where a "Show again" card appears while the checklist is hidden but unfinished.
+
+The checklist also retires itself once every step is done, and it follows your account rather than your browser, so hiding it on one machine hides it everywhere.
+
+## Don and the checklist
+
+Don reads the same progress the checklist does, so he won't email you about a step you have already finished. The first two steps are the exception in the other direction: Don only starts working once the app is installed and capturing, so he never nudges you about those.
